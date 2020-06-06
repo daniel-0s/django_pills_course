@@ -1,0 +1,33 @@
+docker-compose run app sh -c "django-admin.py startproject appTiendaOnline  ."
+
+# posicionado en el directorio del dockerfile 
+docker-compose up 
+
+# carpeta del volumen db chmod 755 
+
+# crear Entorno Virtual Python
+
+python3 -m venv myproject_env
+- dentro de la carpeta da la aplicacion  crea el entorno virtual
+
+source myproject_env/bin/activate
+- activa el entorno Virtual
+
+deactivate
+- desactiva  entorno Virtual
+
+
+# Instalar Django 
+(myproject_env) $pip install django
+
+
+# Migrar Base de datos
+python manage.py makemigrations
+- Genera la migracion en base a los modelos 
+
+
+python manage.py sqlmigrate gestionPedidos 0001
+- genera sql en base a la migracion señalada "0001"
+
+python manage.py migrate
+- Ejecuta la Migracion 
