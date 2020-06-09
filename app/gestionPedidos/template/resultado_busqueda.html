@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Resultado Busqueda</title>
+    <!-- <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+</head>
+<body>
+    <p>Estad buscando  <b> {{query}} </b> </p>
+
+    {% if articulos %}
+        <p>Articulos encontrados: {{articulos|length}}  articulos</p>
+
+        {% for articulo in articulos %}
+            <li>{{articulo.nombre}}</li>
+        {% endfor%}
+    {% else %}
+        <p>No se encuentran productos</p>
+    {% endif %}
+</body>
+</html>

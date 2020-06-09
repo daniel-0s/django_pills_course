@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Busqueda Productos</title>
+    </head>
+    <body>
+        <form action="/contacto/" method="POST">{% csrf_token %}
+            <p>Asunto : </p> <input type="text" name="asunto">
+            <p>Email : </p> <input type="text" name="email">
+            <p>Mensaje : </p> <textarea  type="text" name="mensaje" rows="10" cols="20"> </textarea>
+            
+            <p> <input type="submit" value="Enviar"> </p>
+        </form>
+    </body>
+</html>
