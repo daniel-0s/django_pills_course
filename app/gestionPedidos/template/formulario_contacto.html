@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario contacto</title>
+</head>
+<body>
+    <h1>Contact us</h1>
+    {% if form.errors %}
+    <p style="color: red;"> Por favor revisa este campo </p>    
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
